@@ -1,6 +1,7 @@
 package com.kea.dk.demo.Repos;
 
-import com.example.demo.Model.LoginTable;
+
+import com.kea.dk.demo.Model.LoginTable;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

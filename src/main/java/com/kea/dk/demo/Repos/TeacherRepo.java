@@ -1,8 +1,8 @@
-package com.example.demo.Repos;
+package com.kea.dk.demo.Repos;
 
-import com.example.demo.Model.Teacher;
+
+import com.kea.dk.demo.Model.Teacher;
 import org.springframework.data.repository.CrudRepository;
-
 
 public interface TeacherRepo extends CrudRepository<Teacher, Long> {
 
