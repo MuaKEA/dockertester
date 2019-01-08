@@ -1,0 +1,140 @@
+<!--Teacher-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Create Course</title>
+
+    <!--/*/ <th:block th:include="fragments/navbarHead :: head"></th:block> /*/-->
+
+</head>
+<body>
+
+<!--/*/ <th:block th:replace="fragments/navbarBody :: navbarTeacher"></th:block> /*/-->
+
+<form class="form-signin" method="post" action="/createcourse">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="container div-center">
+                    <h1 class="page-heading mb-3">Create new course</h1>
+                </div>
+            </div>
+            <div class="container input-bg input-padding">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="input-heading">Course</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="input-heading">Student & Teacher</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Name of the course</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.courseName}" required="true">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Min # students</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.minStudents}" required="true">
+                    </div>
+
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Max # students</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.maxStudents}" required="true">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Course langauge</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.courseLanguage}" required="true">
+                    </div>
+                    <div class="input-group mb-3 col-sm-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">ECTS</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.ects}" required="true">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Expected # students</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.expectedNumber}" required="true">
+                    </div>
+
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Teachers</label>
+                        </div>
+                        <select class="custom-select form-control" id="inputGroupSelect01"
+                                th:field="${course.teachers}">
+                            <option th:each="teacher : ${teacherList}"
+                                    th:value="${teacher.id}"
+                                    th:text="${teacher.firstName}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Learning outcome</span>
+                        </div>
+                        <textarea class="form-control" th:field="${course.learningOutcome}" required="true"></textarea>
+                    </div>
+
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Prerequisites</span>
+                        </div>
+                        <textarea class="form-control" th:field="${course.preRequisites}" required="true"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Content</span>
+                        </div>
+                        <textarea class="form-control" th:field="${course.content}" required="true"></textarea>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Learning activities</span>
+                        </div>
+                        <textarea class="form-control" th:field="${course.learningActivities}"
+                                  required="true"></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Exam form</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${course.examForm}" required="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container div-center">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+</body>

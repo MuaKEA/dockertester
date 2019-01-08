@@ -1,0 +1,95 @@
+<!--admin-->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Create Teacher</title>
+
+    <!--/*/ <th:block th:include="fragments/navbarHead :: head"></th:block> /*/-->
+
+</head>
+
+<!--/*/ <th:block th:replace="fragments/navbarBody :: navbarAdmin"></th:block> /*/-->
+
+<body>
+<form class="form-signin" method="post" action="/createTeacher">
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="container div-center">
+                    <h1 class="page-heading mb-3">Create teacher</h1>
+                </div>
+            </div>
+            <div class="container input-bg input-padding mb-3">
+
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p class="input-heading">Personal information</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <p class="input-heading">Address</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">First name</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.firstName}" required="true">
+                    </div>
+
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Street name</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.address}" required="true">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Last name</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.lastName}" required="true">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Postcode</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.postcode}" required="true">
+                    </div>
+                    <div class="input-group mb-3 col-sm-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">City</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.city}" required="true">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Tlf</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.tlf}" required="true">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-sm-6">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Email</span>
+                        </div>
+                        <input class="form-control" type="text" th:field="${teacher.email}" required="true">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container div-center">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+    </div>
+
+</form>
+</body>

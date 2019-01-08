@@ -1,0 +1,64 @@
+<!--admin-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Approval</title>
+
+    <!--/*/ <th:block th:include="fragments/navbarHead :: head"></th:block> /*/-->
+
+</head>
+<body>
+
+<!--/*/ <th:block th:replace="fragments/navbarBody :: navbarAdmin"></th:block> /*/-->
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container mb-3">
+        <div class="row">
+            <div class="container div-center mb-3">
+                <h1 class="page-heading mb-3">Waiting List</h1>
+            </div>
+        </div>
+
+        <div class="container input-bg input-padding">
+            <table class="table table-striped table-list">
+                <thead>
+                <tr>
+                    <th scope="col">student name</th>
+                    <th scope="col">student last name</th>
+                    <th scope="col">student mail</th>
+                    <th scope="col">date for aplication</th>
+                    <th scope="col">Course name</th>
+                    <th scope="col">Prerequisites</th>
+                    <th scope="col">choose</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="Student:${studentandcourses}">
+                    <td th:text="${Student.getStudent().getFirstName()}"></td>
+                    <td th:text="${Student.getStudent().getLastName()}"></td>
+                    <td th:text="${Student.getStudent().getEmail()}"></td>
+                    <td th:text="${Student.date}"></td>
+                    <td th:text="${Student.getCourse().getCourseName()}"></td>
+                    <td th:text="${Student.getCourse().preRequisites}"></td>
+                    <td>
+                        <a th:href="@{'/AccepedStudent/'+${Student.student.getId()} + '/'+${Student.course.getId()}}"
+                           class="btn-sm btn-success">Accept</a>
+                        <a th:href="@{'/rejectStudent/'+${Student.student.getId()} + '/'+${Student.course.getId()}}"
+                           onclick="return confirm('Bekræft afvisning')" class="btn-sm btn-danger">Reject</a>
+
+                    </td>
+                </tr>
+
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

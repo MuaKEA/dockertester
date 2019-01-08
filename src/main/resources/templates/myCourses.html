@@ -1,0 +1,56 @@
+<!--admin-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Approval</title>
+
+    <!--/*/ <th:block th:include="fragments/navbarHead :: head"></th:block> /*/-->
+
+</head>
+<body>
+
+<!--/*/ <th:block th:replace="fragments/navbarBody :: navbarStudent"></th:block> /*/-->
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container mb-3">
+        <div class="row">
+            <div class="container div-center mb-3">
+                <h1 class="page-heading mb-3">mine courses</h1>
+            </div>
+        </div>
+
+        <div class="container input-bg input-padding">
+            <table class="table table-striped table-list">
+                <thead>
+                <tr>
+                    <th scope="col">student name</th>
+                    <th scope="col">student last name</th>
+                    <th scope="col">Course name</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="Student:${studentList}">
+                    <td th:text="${Student.getStudent().getFirstName()}"></td>
+                    <td th:text="${Student.getStudent().getLastName()}"></td>
+                    <td th:text="${Student.getStudent().getEmail()}"></td>
+                    <td th:text="${Student.date}"></td>
+                    <td th:text="${Student.getCourse().getCourseName()}"></td>
+                    <td th:text="${Student.getCourse().preRequisites}"></td>
+                    <td>
+
+                    </td>
+                </tr>
+
+
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

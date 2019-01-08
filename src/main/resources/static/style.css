@@ -1,0 +1,191 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html body {
+    /* The image used */
+    background-image: url("MandatoryB.jpg");
+
+    /* Full height */
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: 0 55px;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+}
+
+nav {
+    overflow: auto;
+}
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+#myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#myUL li a {
+    border: 1px solid #ddd;
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    display: block
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee;
+}
+
+.nav-bg-color {
+    background-color: #133965;
+}
+
+.navbar-fix {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 55px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-link {
+    text-transform: uppercase !important;
+}
+
+.home {
+    width: 87px;
+    padding-right: 10px;
+    padding-left: 13px;
+}
+
+.home-bg {
+    background-color: white;
+}
+
+.input-bg {
+    background-color: #1a558e;
+}
+
+.input-padding {
+    padding-top: 15px;
+}
+
+.fa-home {
+    color: #24a2b6;
+}
+
+/*.navbar-dark .navbar-nav > .active {
+    background-color: #134370 !important;
+    color: white;
+}*/
+
+.link:hover {
+    background-color: #134370;
+    color: white;
+}
+
+.navbar-nav li a {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.logout {
+    color: black !important;
+}
+
+.logout:hover {
+    background-color: black !important;
+    color: #c24442 !important;
+}
+
+.btn-logout {
+    background-color: #e7514a;
+}
+
+.jumbotron {
+    background: rgb(19, 67, 112);
+    margin-left: 87px;
+    margin-right: 87px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.page-heading {
+    font-size: 32px;
+    font-family: "Helvetica Neue Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.input-heading {
+    font-size: 19px;
+    font-family: "Helvetica Neue Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
+
+.input-group-text {
+    background-color: #b7d3e8;
+    border: 1px solid #0c5582;
+}
+
+.form-control {
+    border: 1px solid #0c5582;
+}
+
+.div-center {
+    text-align: center;
+}
+
+table {
+    background-color: #1a558e;
+    border: 1px solid #2e70a4;
+    color: white;
+}
+
+table.table-list > thead > tr > th {
+    border: 1px solid #2e70a4;
+    font-size: 15px;
+    font-family: "Helvetica Neue Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
+
+.show-temp {
+    font-size: 15px;
+    font-family: "Helvetica Neue Condensed", sans-serif;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+}
+
+.input-padding-btm {
+    padding-bottom: 15px;
+}

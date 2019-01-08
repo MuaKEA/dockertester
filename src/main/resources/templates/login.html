@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Approval</title>
+
+    <!--/*/ <th:block th:include="fragments/navbarHead :: head"></th:block> /*/-->
+
+</head>
+<body>
+
+<!--/*/ <th:block th:replace="fragments/navbarBody :: navbarLogin"></th:block> /*/-->
+
+<form class="form-signin" method="post" action="/login">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container mb-3">
+            <div class="row">
+                <div class="container div-center">
+                    <h1 class="page-heading mb-3">Login</h1>
+                </div>
+            </div>
+            <div class="container input-bg input-padding mb-3">
+                <div class="form-group" th:if="${loginFailed}">
+                    <div class="col-md-12">
+                        <div class="alert alert-danger">
+                            Ugyldigt login!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group mb-3 col-md-12">
+                        <div class="input-group-prepend">
+                            <label for="inputEmail" class="input-group-text">Email</label>
+                        </div>
+                        <input type="email" id="inputEmail" class="form-control" name="email"
+                               autofocus="true" value="admin@admin.dk" autocomplete="off">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group mb-3 col-md-12">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputPassword">Adgangskode</label>
+                        </div>
+                        <input type="password" id="inputPassword" value="password" class="form-control" name="password">
+                    </div>
+                </div>
+            </div>
+            <div class="container div-center">
+                <input name="action" class="btn btn-success" type="submit" value="Log Ind"/>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>
