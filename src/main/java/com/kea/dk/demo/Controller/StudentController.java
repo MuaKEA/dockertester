@@ -77,6 +77,7 @@ public class StudentController {
             WaitingList w = new WaitingList();
             Student student = stuRepo.findById(Id).get();
             Course course = courseRepository.findById(courseList[i]).get();
+            System.out.println("");
             w.setCourse(course);
             w.setStudent(student);
             w.setDate(w.getcurrentdate());
